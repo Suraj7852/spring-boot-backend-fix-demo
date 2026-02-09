@@ -17,10 +17,11 @@ spring:
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
       ddl-auto: create-drop
-    show-sql: false
+    show-sql: true
     properties:
       hibernate:
         format_sql: true
+        use_sql_comments: true
 
 server:
   port: 8080
@@ -31,3 +32,5 @@ logging:
   level:
     root: INFO
     com.example.backendfix: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
